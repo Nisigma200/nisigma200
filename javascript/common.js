@@ -1,0 +1,15 @@
+const pagetopBtn = document.querySelector('#page-top');
+pagetopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
+$(document).ready(function () {
+  $("#header").load("common/header.html");
+});
+
+$(document).ready(function () {
+  $("#footer").load("common/footer.html");
+});

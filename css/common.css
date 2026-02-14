@@ -1,0 +1,881 @@
+@import url('https://use.fontawesome.com/releases/v7.2.0/css/all.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Sharp');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-main: #262626;
+  --color-second: #565956;
+  --color-text: #333333;
+  --color-hover: #8C8C8C;
+
+  --color-major: #00448d;
+
+  --color-logo-twitter: #14171a;
+  /*--color-logo-twitter: #1da1f3;*/
+  --color-logo-youtube: #ff1831;
+  --color-logo-twitch: #9146FF;
+  --color-logo-discord: #5865F2;
+  --color-logo-amazon: #FF9900;
+  --color-logo-line: #00C300;
+  --color-logo-pdf: #EC1C24;
+  --color-logo-github: #0d1117;
+
+  --color-good-icon: #ffa537;
+  --color-good-background: #fff5f0;
+  --color-good-border: var(--color-good-icon);
+  --color-term-icon: #403D39;
+  --color-term-background: #cfcdc8;
+  --color-term-border: var(--color-term-icon);
+  --color-attention-icon: #F7DA38;
+  --color-attention-background: #FDF9EE;
+  --color-attention-border: var(--color-attention-icon);
+  --color-error-icon: #F36060;
+  --color-error-background: #FFF2F0;
+  --color-error-border: var(--color-error-icon);
+  --color-chat-operator-background: #EDF1EE;
+  --color-chat-user-background: #ABE0FF;
+  --color-blockquote-icon: #585858;
+  --color-blockquote-background: #F3F3F3;
+  --color-blockquote-border: #C4C4C4;
+
+  --main-font-family: 'Roboto', 'Noto Sans JP', sans-serif;
+}
+
+p,
+ul li,
+ol li,
+table,
+blockquote {
+  line-height: 2;
+  font-size: 16px;
+  color: var(--color-text);
+  overflow-wrap: break-word;
+}
+
+p,
+ul,
+ol {
+  margin: 0
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text);
+}
+
+h1 {
+  position: relative;
+  text-align: center;
+}
+
+h1:before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: var(--color-main);
+}
+
+body {
+  margin: 0;
+  font-family: var(--main-font-family);
+}
+
+.AweSomeFont-Free {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.AweSomeFont-Free2 {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.AweSomeFont-Brands {
+  font-family: "Font Awesome 7 Brands";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.normal_tytle {
+  position: relative;
+  padding: 1rem 2rem;
+  border-left: 5px solid var(--color-main);
+  background: #f4f4f4;
+  color: var(--color-text);
+}
+
+.big {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  margin: 0;
+  background: linear-gradient(transparent 50%, yellow 50%);
+  display: inline;
+  color: var(--color-text);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.torikesi {
+  text-decoration: line-through;
+}
+
+/* ↓ aタグ ↓ */
+a {
+  text-decoration: none;
+}
+
+.a_blank,
+.a {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: 0.3s ease;
+  font-family: var(--main-font-family);
+}
+
+.a_nounder {
+  color: var(--color-text);
+  transition: 0.3s ease;
+}
+
+.a_blank::after {
+  content: "\e89e";
+  color: var(--color-text);
+  font-family: 'Material Icons Sharp';
+  font-size: 10px;
+  padding: 0 3px;
+  transition: 0.3s ease;
+  vertical-align: middle;
+}
+
+.a_blank:hover,
+.a_blank:hover::after,
+.a:hover,
+.a_nounder:hover,
+.a_nounder:hover::after {
+  color: var(--color-hover);
+  transition: 0.3s ease;
+}
+
+/* ↑ aタグ ↑ */
+/* ↓ PDFを見る ↓ */
+#pdf {
+  text-align: right;
+  margin: 16px 0;
+}
+
+#pdf .btn {
+  text-align: right;
+  width: 150px;
+  height: 35px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+#pdf .btn,
+#pdf a.btn,
+#pdf button.btn {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+#pdf a.btn-flat {
+  overflow: hidden;
+  padding: 3px;
+  color: #fff;
+  border-radius: 0;
+  background: #000;
+}
+
+#pdf a.btn-flat span {
+  position: absolute;
+  width: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#pdf a.btn-flat span::before {
+  content: "\f1c1";
+  color: #FFFFFF;
+  font-family: "Font Awesome 7 Free";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+#pdf a.btn-flat:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-transform: translateX(-96%);
+  transform: translateX(-96%);
+  background: var(--color-logo-pdf);
+}
+
+#pdf a.btn-flat:hover:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+/* ↑ PDFを見る ↑ */
+
+a.anchor {
+  display: block;
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+/* ↓ 装飾 ↓ */
+/* ↓ 共通 ↓ */
+.decoration--good,
+.decoration--term,
+blockquote {
+  display: block;
+  position: relative;
+  line-height: 2;
+  font-size: 16px;
+  color: var(--color-text);
+  overflow-wrap: break-word;
+  justify-content: center;
+  border-radius: 3px;
+  box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.3);
+  padding: 20px 20px 20px 80px;
+  margin: 10px 0 30px 0;
+}
+
+.decoration--good::before,
+.decoration--term::before,
+blockquote::before {
+  display: inline-block;
+  position: absolute;
+  font-family: 'Material Icons Sharp';
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  left: 20px;
+}
+
+.decoration--good::after,
+.decoration--term::after,
+blockquote::after {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  height: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  left: 60px;
+  opacity: 0.5;
+}
+
+/* ↓ GOOD ↓ */
+.decoration--good {
+  background-color: var(--color-good-background);
+}
+
+.decoration--good::before {
+  content: '\e817';
+  color: var(--color-good-icon);
+}
+
+.decoration--good::after {
+  border-right: dashed 2px var(--color-good-border);
+}
+
+/* ↑ GOOD ↑ */
+/* ↓ 用語解説 ↓ */
+.decoration--term {
+  background-color: var(--color-term-background);
+}
+
+.decoration--term span {
+  display: block;
+  font-size: 20px;
+}
+
+.decoration--term span::before {
+  content: '【 '
+}
+
+.decoration--term span::after {
+  content: ' 】'
+}
+
+.decoration--term::before {
+  content: '\ea19';
+  color: var(--color-term-icon);
+}
+
+.decoration--term::after {
+  border-right: dashed 2px var(--color-term-border);
+}
+
+/* ↑ 用語解説 ↑ */
+/* ↓ 引用 ↓ */
+blockquote {
+  background-color: var(--color-blockquote-background);
+}
+
+blockquote span {
+  display: block;
+  font-size: 12px;
+  text-align: right;
+}
+
+blockquote::before {
+  content: '\e244';
+  transform: translateY(-50%) scaleX(-1);
+  color: var(--color-blockquote-icon);
+}
+
+blockquote::after {
+  border-right: dashed 2px var(--color-blockquote-border);
+}
+
+/* ↑ 引用 ↑ */
+/* ↓ 共通 ↓ */
+.decoration--attention,
+.decoration--error {
+  display: block;
+  position: relative;
+  line-height: 2;
+  font-size: 16px;
+  color: var(--color-text);
+  overflow-wrap: break-word;
+  border: 2px solid var(--color-attention-border);
+  background-color: var(--color-attention-background);
+  padding: 38px 20px 20px 20px;
+  margin: 40px 0 30px 0;
+}
+
+.decoration--attention::before,
+.decoration--error::before {
+  display: inline;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Material Icons Sharp';
+  top: -25px;
+  left: 20px;
+  padding: 0 10px 0 10px;
+  content: '\e002';
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: var(--color-attention-icon);
+  border-radius: 100%;
+  border: solid 3px #FFFFFF;
+}
+
+/* ↑ 共通 ↑ */
+/* ↓ 注意 ↓ */
+.decoration--attention {
+  color: var(--color-text);
+  border: 2px solid var(--color-attention-border);
+  background-color: var(--color-attention-background);
+}
+
+.decoration--attention::before {
+  content: '\e002';
+  background-color: var(--color-attention-icon);
+}
+
+/* ↑ 注意 ↑ */
+/* ↓ エラー ↓ */
+.decoration--error {
+  color: var(--color-text);
+  border: 2px solid var(--color-error-border);
+  background-color: var(--color-error-background);
+}
+
+.decoration--error::before {
+  content: '\e5cd';
+  background-color: var(--color-error-icon);
+}
+
+/* ↑ エラー ↑ */
+/* ↑ 装飾 ↑ */
+
+/* ↓ 画像説明 ↓ */
+.img-frame {
+  width: 100% !important;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.img-frame p {
+  width: 95%;
+  font-size: 13px !important;
+  color: var(--color-hover) !important;
+  line-height: 1 !important;
+  padding: 0;
+  margin: 0 auto;
+  padding-top: 8px;
+  margin-bottom: 20px;
+}
+
+.normal_img {
+  width: 100%;
+  max-width: 800px;
+  display: block;
+  margin: auto;
+  border: 2px solid var(--color-hover);
+}
+
+/* ↑ 画像説明 ↑ */
+
+/* ↓ テーブル ↓ */
+.normal_table {
+  width: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.normal_table th {
+  min-width: 240px;
+  border-bottom: solid 2px var(--color-main);
+  padding: 10px 0;
+  text-align: left;
+}
+
+.normal_table th:first-child {
+  min-width: 200px !important;
+}
+
+.normal_table td {
+  border-bottom: solid 2px #ddd;
+  padding: 10px 0;
+  text-align: left;
+}
+
+/* ↓ テーブルのscroll分かりやすくするやつ ↓ */
+.table-wrap {
+  overflow: auto;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) 0 0/20px 100%, linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) right/20px 100%;
+  background-repeat: no-repeat;
+  margin: 16px 0;
+}
+
+.table-wrap table {
+  background: linear-gradient(to left, hsla(0, 0%, 100%, 0), white 15px) 0 0 / 50px 100%, linear-gradient(to right, hsla(0, 0%, 100%, 0), white 15px) right / 50px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+/* ↑ テーブルのscroll分かりやすくするやつ ↑ */
+/* ↑ テーブル ↑ */
+/* ↓ ボタン ↓ */
+.normal_button_wrap {
+  display: block;
+  text-align: center;
+}
+
+.normal_button {
+  display: inline-block;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 18px;
+  width: 250px;
+  height: 40px;
+  font-weight: bold;
+  border: 2px solid var(--color-main);
+  transition: 0.3s;
+  box-shadow: 5px 5px 0px 0px var(--color-main);
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 9px;
+  margin: 10px;
+}
+
+.normal_button:hover {
+  box-shadow: 0 0 var(--color-main);
+  color: #fff;
+  background-color: var(--color-main);
+}
+
+/* ↑ ボタン ↑ */
+/* ↓ ヘッダー ↓ */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--color-main);
+}
+
+.header-left {
+  flex: 1;
+  /* 左側の領域を広げて右側と均衡を保つ */
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  height: 40px;
+  width: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+.right {
+  flex: 2;
+  /* 中央の領域を確保する */
+  display: flex;
+  justify-content: center;
+}
+
+.right a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.right span::after {
+  color: #FFFFFF;
+  margin: 0 15px 0 15px;
+  font-size: 14px;
+  content: "|"
+}
+
+.right span:first-of-type::before {
+  color: #FFFFFF;
+  margin: 0 15px 0 15px;
+  font-size: 14px;
+  content: "|"
+}
+
+/* 右端に何も要素がないと真ん中からズレるため、右側にもダミーの領域を作る */
+header::after {
+  content: "";
+  flex: 1;
+}
+
+/* ↑ ヘッダー ↑ */
+
+/* ↓ フッター ↓ */
+footer {
+  background: var(--color-main);
+  padding: 0 30px;
+  margin-top: 25px;
+}
+
+footer .copyright,
+footer .copyright-1 {
+  color: #ccc;
+  font-size: 10px;
+}
+
+footer .copyright {
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .copyright-1 {
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  footer {
+    padding: 0 15px;
+  }
+}
+
+/* ↑ フッターリンク ↑ */
+/* ↑ フッター ↑ */
+
+/* ↓ 公開日・更新日 ↓ */
+#update-day {
+  text-align: right;
+  margin: 35px 0 20px 0;
+}
+
+#update-day p {
+  display: inline;
+  color: var(--color-hover);
+  font-size: 13px;
+}
+
+#released::before,
+#updated::before {
+  font-family: 'Material Icons Sharp';
+  display: inline-block;
+  color: var(--color-hover);
+  margin-right: 5px;
+  vertical-align: top;
+}
+
+#released::before {
+  content: "\e8b5";
+}
+
+#updated::before {
+  content: "\e923";
+}
+
+#updated {
+  margin-left: 10px;
+}
+
+/* ↑ 公開日・更新日 ↑ */
+/* ↓ パンくずリスト ↓ */
+.pan {
+  position: relative;
+  top: 10px;
+  /* スクロール */
+  overflow: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+}
+
+.breadcrumb {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  /*横に並ぶように*/
+  list-style: none;
+  font-weight: bold;
+  /*太字*/
+}
+
+.breadcrumb li:after {
+  /* ▶を表示*/
+  font-family: 'Material Icons Sharp';
+  content: '\e409';
+  font-size: 12px;
+  -webkit-font-smoothing: antialiased;
+  padding: 0 0.2em;
+  color: var(--color-hover);
+}
+
+.breadcrumb li:last-child:after {
+  content: '';
+}
+
+.breadcrumb li a {
+  text-decoration: none;
+  color: var(--color-hover);
+  font-size: 12px;
+}
+
+.breadcrumb li a:before {
+  font-family: 'Material Icons Sharp';
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-main);
+  margin-right: 3px;
+  vertical-align: bottom;
+}
+
+.pan-home:before {
+  /*家アイコン*/
+  content: '\e88a';
+}
+
+.pan-folder:before {
+  /*フォルダアイコン*/
+  content: '\e2c7';
+}
+
+.pan-paper:before {
+  /*紙アイコン*/
+  content: '\e24d';
+}
+
+.pan-404:before {
+  /*404アイコン*/
+  content: '\e5c9';
+}
+
+.pan-search:before {
+  /*検索結果アイコン*/
+  content: '\e8b6';
+}
+
+.breadcrumb li a:hover>span {
+  text-decoration: underline;
+}
+
+/* ↑ パンくずリスト ↑ */
+
+/* ↓ Page TOP ↓ */
+/* ボタンのスタイル */
+#page-top {
+  /* buttonタグのリセットCSS */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  /* ボタンの装飾 */
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 100;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* 矢印のスタイル */
+#page-top::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  margin-bottom: -6px;
+  border-top: solid 3px #fff;
+  border-right: solid 3px #fff;
+  transform: rotate(-45deg);
+}
+
+/* ホバー時のスタイル */
+#page-top:hover {
+  transform: scale(1.1);
+}
+
+@media all and (max-width: 767px) {
+  #page-top {
+    zoom: 70%;
+  }
+}
+
+/* ↑ PageTop ↑ */
+/* ↓ FADサーバーで遊ぶ ↓ */
+.message-wrapper {
+  text-align: center;
+  margin: 15px;
+}
+
+.message {
+  padding: 0 20px;
+  background-color: var(--color-second);
+  cursor: pointer;
+  box-shadow: 0px 7px var(--color-main);
+}
+
+.message:active {
+  position: relative;
+  top: 7px;
+  box-shadow: none;
+}
+
+.heading {
+  padding-top: 10px;
+  color: #5f5d60;
+}
+
+.catch-copy1 {
+  font-size: 4.5vmin;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.catch-copy2 {
+  font-size: 4vmin;
+  font-weight: normal;
+  margin-top: 0px;
+}
+
+.btn {
+  padding: 8px 24px;
+  color: white;
+  display: inline-block;
+  opacity: 0.8;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/* ここまで */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #FFFFFF;
+  }
+}
