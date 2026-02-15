@@ -162,6 +162,14 @@
   content: "\f233";
 }
 
+.account-logo-misskey::before {
+  background: #1a1e1f;
+  content: "";
+  background-image: url("../image/index/misskeyicon.png");
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .account-logo-github::before {
   background: var(--color-logo-github);
