@@ -669,19 +669,23 @@ header {
 
 /* ↓ フッター ↓ */
 footer {
+  display: flex;
+  justify-content: center;
   background: var(--color-main);
   padding: 0 30px;
 }
 
 footer .copyright,
 footer .copyright-1 {
-  color: #ccc;
+  color: var(--color-second);
   font-size: 10px;
 }
 
-footer .copyright {
+.copyright {
+  flex: 1;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 15px;
+  max-width: 900px;
 }
 
 footer .copyright-1 {
