@@ -17,8 +17,8 @@ html {
 }
 
 :root {
-  --color-main: #262626;
-  --color-second: #565956;
+  --color-main: #242424;
+  --color-second: #d9d9d9;
   --color-text: #333333;
   --color-hover: #8C8C8C;
 
@@ -571,28 +571,28 @@ blockquote::after {
 /* ↓ ヘッダー ↓ */
 header {
   display: flex;
+  width: 100%;
   align-items: center;
-  padding: 10px 20px;
   background-color: var(--color-main);
+  height: 65px;
+  position: fixed;
+  z-index: 100;
 }
 
-.header-left {
+.left {
   flex: 1;
-  /* 左側の領域を広げて右側と均衡を保つ */
-  display: flex;
-  align-items: center;
+  height: 50px;
+  margin-left: 15px;
 }
 
+.left a,
 .header_logo {
-  height: 40px;
-  width: auto;
-  border-radius: 50%;
-  display: block;
+  width: 50px;
+  height: 50px;
 }
 
 .right {
   flex: 2;
-  /* 中央の領域を確保する */
   display: flex;
   justify-content: center;
 }
@@ -601,21 +601,21 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
-  color: #FFFFFF;
+  color: var(--color-second);
 }
 
 .right span::after {
-  color: #FFFFFF;
+  color: var(--color-second);
   margin: 0 15px 0 15px;
   font-size: 14px;
-  content: "|"
+  content: "|";
 }
 
 .right span:first-of-type::before {
-  color: #FFFFFF;
+  color: var(--color-second);
   margin: 0 15px 0 15px;
   font-size: 14px;
-  content: "|"
+  content: "|";
 }
 
 /* 右端に何も要素がないと真ん中からズレるため、右側にもダミーの領域を作る */
@@ -630,7 +630,6 @@ header::after {
 footer {
   background: var(--color-main);
   padding: 0 30px;
-  margin-top: 25px;
 }
 
 footer .copyright,
