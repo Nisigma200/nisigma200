@@ -181,6 +181,11 @@
   content: "\f392";
 }
 
+.account-logo-site::before {
+  background: var(--color-main);
+  content: "\f2d0";
+}
+
 .account-logo-fad::before {
   background: #000946;
   content: "";
