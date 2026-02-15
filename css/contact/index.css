@@ -1,1 +1,5 @@
 @import "../common.css";
+
+.mail::before {
+    content: "\f0e0";
+}

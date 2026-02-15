@@ -133,7 +133,7 @@ body {
 
 
 .AweSomeFont-Free {
-  font-family: "Font Awesome 7 Free";
+  font-family: "Font Awesome 7 Free" !important;
   font-weight: 900;
   font-style: normal;
   font-variant: normal;
@@ -142,7 +142,7 @@ body {
 }
 
 .AweSomeFont-Free2 {
-  font-family: "Font Awesome 7 Free";
+  font-family: "Font Awesome 7 Free" !important;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
@@ -151,7 +151,7 @@ body {
 }
 
 .AweSomeFont-Brands {
-  font-family: "Font Awesome 7 Brands";
+  font-family: "Font Awesome 7 Brands" !important;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
