@@ -7,9 +7,9 @@ pagetopBtn.addEventListener('click', () => {
 });
 
 $(document).ready(function () {
-  $("#header").load("common/header.html");
+  $("#header").load("https://nisigma200.github.io/nisigma200/common/header.html");
 });
 
 $(document).ready(function () {
-  $("#footer").load("common/footer.html");
+  $("#footer").load("https://nisigma200.github.io/nisigma200/common/footer.html");
 });

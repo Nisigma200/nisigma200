@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 :root {
   --color-main: #242424;
   --color-second: #d9d9d9;
@@ -98,7 +99,37 @@ h1:before {
 body {
   margin: 0;
   font-family: var(--main-font-family);
+  background-color: var(--color-main);
 }
+
+#container {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  background-color: #FFFFFF;
+  margin: 65px 15px 0 15px;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  background-color: #F1F1F1;
+}
+
+#child1 {
+  width: 100%;
+  max-width: 900px;
+  background-color: #FFFFFF;
+  margin-top: 65px;
+  padding: 0 15px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 
 .AweSomeFont-Free {
   font-family: "Font Awesome 7 Free";
@@ -571,10 +602,19 @@ header {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
   background-color: var(--color-main);
   height: 65px;
   position: fixed;
   z-index: 100;
+}
+
+.contents {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  align-items: center;
 }
 
 .left {
@@ -589,35 +629,34 @@ header {
   height: 50px;
 }
 
-.right {
-  flex: 2;
+.center {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.right a {
+.center a {
   text-decoration: none;
   font-weight: bold;
   font-size: 14px;
   color: var(--color-second);
 }
 
-.right span::after {
+.center span::after {
   color: var(--color-second);
   margin: 0 15px 0 15px;
   font-size: 14px;
   content: "|";
 }
 
-.right span:first-of-type::before {
+.center span:first-of-type::before {
   color: var(--color-second);
   margin: 0 15px 0 15px;
   font-size: 14px;
   content: "|";
 }
 
-/* 右端に何も要素がないと真ん中からズレるため、右側にもダミーの領域を作る */
-header::after {
+.right {
   content: "";
   flex: 1;
 }
@@ -774,6 +813,150 @@ footer .copyright-1 {
 
 /* ↑ パンくずリスト ↑ */
 
+/* ↓ アコーディオンボックス ↓ */
+.acbox {
+  width: auto;
+  font-size: 0px;
+  /* ラベルと開く部分を分離する時は数値を入れる */
+  margin: 10px 0 10px 0;
+  /* ボックス全体の位置調整 */
+}
+
+.acbox>label {
+  width: 100%;
+  font-size: 16px;
+  /* ラベルの文字サイズ */
+  font-weight: bold;
+  text-align: center;
+  background: var(--color-second);
+
+  /* ラベルの背景色 */
+  position: relative;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  /* ラベルの角の丸み */
+  cursor: pointer;
+  color: var(--color-main);
+}
+
+.acbox>label:hover {
+  background: var(--color-main);
+  color: var(--color-second)
+    /* ラベルにマウスを乗せた時の背景色 */
+}
+
+.acbox input {
+  display: none;
+}
+
+.acbox>label:after {
+  color: var(--color-main);
+  content: "▼";
+  /* ラベルのアイコン */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -14px;
+}
+
+.acbox>label:hover:after {
+  color: var(--color-second);
+  content: "▼";
+  /* ラベルのアイコン */
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -14px;
+}
+
+.acbox>input:checked~label::after {
+  content: "▲";
+  /* ラベルをクリックした後のアイコン */
+  color: var(--color-text);
+}
+
+.acbox-under {
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.15s;
+  /* 開閉スピードの設定 */
+}
+
+.acbox input:checked~.acbox-under {
+  height: auto;
+  padding: 18px 10px;
+  /* 開いた部分の枠内の余白 */
+  border-radius: 0px;
+  /* 開いた部分の背景色 */
+  opacity: 1;
+}
+
+.acbox input:checked~label {
+  background: #ffffff;
+  /* クリック後のラベルの背景色 */
+  border: 1px solid var(--color-second);
+  color: var(--color-text);
+
+}
+
+.acbox-under {
+  font-size: 15px;
+  /* 開いた部分の文字サイズ */
+  color: var(--color-text);
+  /* 開いた部分の文字色 */
+  padding: 0.5em 1em;
+  border: solid 1px var(--color-second);
+  border-radius: 4px !important;
+}
+
+/* ↑ アコーディオンボックス ↑ */
+/* ↓ テーブル ↓ */
+.normal_table {
+  width: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.normal_table th {
+  min-width: 240px;
+  border-bottom: solid 2px var(--color-main);
+  padding: 10px 0;
+  text-align: left;
+}
+
+.normal_table th:first-child {
+  min-width: 200px !important;
+}
+
+.normal_table td {
+  border-bottom: solid 2px #ddd;
+  padding: 10px 0;
+  text-align: left;
+}
+
+/* ↓ テーブルのscroll分かりやすくするやつ ↓ */
+.table-wrap {
+  overflow: auto;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) 0 0/20px 100%, linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) right/20px 100%;
+  background-repeat: no-repeat;
+  margin: 16px 0;
+}
+
+.table-wrap table {
+  background: linear-gradient(to left, hsla(0, 0%, 100%, 0), white 15px) 0 0 / 50px 100%, linear-gradient(to right, hsla(0, 0%, 100%, 0), white 15px) right / 50px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local;
+}
+
+/* ↑ テーブルのscroll分かりやすくするやつ ↑ */
+/* ↑ テーブル ↑ */
+
 /* ↓ Page TOP ↓ */
 /* ボタンのスタイル */
 #page-top {
@@ -821,56 +1004,7 @@ footer .copyright-1 {
 }
 
 /* ↑ PageTop ↑ */
-/* ↓ FADサーバーで遊ぶ ↓ */
-.message-wrapper {
-  text-align: center;
-  margin: 15px;
-}
 
-.message {
-  padding: 0 20px;
-  background-color: var(--color-second);
-  cursor: pointer;
-  box-shadow: 0px 7px var(--color-main);
-}
-
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
-}
-
-.heading {
-  padding-top: 10px;
-  color: #5f5d60;
-}
-
-.catch-copy1 {
-  font-size: 4.5vmin;
-  font-weight: bold;
-  margin-bottom: 0px;
-}
-
-.catch-copy2 {
-  font-size: 4vmin;
-  font-weight: normal;
-  margin-top: 0px;
-}
-
-.btn {
-  padding: 8px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-/* ここまで */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #FFFFFF;
