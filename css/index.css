@@ -176,6 +176,11 @@
   content: "\f09b";
 }
 
+.account-logo-discord::before {
+  background: #5062b0;
+  content: "\f392";
+}
+
 .account-logo-fad::before {
   background: #000946;
   content: "";
