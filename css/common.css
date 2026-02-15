@@ -102,12 +102,8 @@ body {
   background-color: var(--color-main);
 }
 
-#container {
+.container {
   width: 100%;
-  margin: 0 auto;
-  max-width: 1280px;
-  background-color: #FFFFFF;
-  margin: 65px 15px 0 15px;
 }
 
 #content {
@@ -125,12 +121,10 @@ body {
   padding-bottom: 20px;
 }
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
+.container,
+#child1 {
+  min-height: calc(100svh - 65px - 103px);
 }
-
 
 .AweSomeFont-Free {
   font-family: "Font Awesome 7 Free" !important;
