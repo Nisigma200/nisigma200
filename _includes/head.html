@@ -29,9 +29,8 @@
     content="default-src 'self'; script-src 'self' https://instant.page https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://use.fontawesome.com https://fonts.googleapis.com; font-src 'self' https://use.fontawesome.com https://fonts.gstatic.com;">
 
 <title>{{ page.title }}</title>
-<link rel="icon" href="{{ 'image/icon/Nisigma_favicon.ico' | relative_url }}">
 
-
+<!-- favicon設定 -->
 <meta name="msapplication-square70x70logo" content="{{ site.baseurl}}/image/favicon/site-tile-70x70.png">
 <meta name="msapplication-square150x150logo" content="{{ site.baseurl}}/image/favicon/site-tile-150x150.png">
 <meta name="msapplication-wide310x150logo" content="{{ site.baseurl}}/image/favicon/site-tile-310x150.png">
@@ -78,6 +77,21 @@
 <link rel="icon" sizes="any" href="{{ site.baseurl }}/image/favicon/favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="{{ site.baseurl}}/image/favicon/manifest.json">
 
-
-
+<!-- CSS -->
 <link rel="stylesheet" href="{{ 'css/common.css' | relative_url }}">
+
+<!-- OGP -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+{% if page.og_image %}
+<meta property="og:image" content="{{ page.og_image | absolute_url }}">
+{% else %}
+<meta property="og:image" content="{{ '/image/ogp/default.jpg' | absolute_url }}">
+{% endif %}
+
+<meta property="og:description" content="{{ page.description | default: site.description }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<meta name="twitter:card" content="summary_large_image">
