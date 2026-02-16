@@ -38,7 +38,11 @@ css_path: css/portfolio/index.css
                 <ol>
                     <li class="card-blog-a">
                         <a href="{{ site.baseurl }}/portfolio/fad-server-plugin.html">
-                            <img src="{{ site.baseurl}}/image/ortfolio/index/FAD-thumbnail.jpg">
+                            <picture>
+                                <source srcset="{{ site.baseurl}}/image/portfolio/index/FAD-thumbnail.webp"
+                                    type="image/webp">
+                                <img src="{{ site.baseurl}}/image/portfolio/index/FAD-thumbnail.jpg">
+                            </picture>
                             <div class="card-blog-content">
                                 <h2 class="card-title">FADサーバープラグイン</h2>
                                 <p class="card-excerpt">
