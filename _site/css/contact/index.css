@@ -1,9 +1,0 @@
-@import "../common.css";
-
-.mail {
-    margin-right: 5px;
-}
-
-.mail::before {
-    content: "\f0e0";
-}
