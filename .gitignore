@@ -13,3 +13,5 @@ vendor/
 # OSのゴミファイル
 Thumbs.db
 .DS_Store
+
+Gemfile.lock
