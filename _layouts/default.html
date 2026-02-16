@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     {% include head.html %}
+    {% if page.css_path %}
+    <link rel="stylesheet" href="{{ page.css_path | relative_url }}">
+    {% endif %}
 </head>
 
 <body>
     {% include header.html %}
 
-    {{ content }}
+    <main>
+        {{ content }}
+    </main>
 
     {% include footer.html %}
 
-    <script type="text/javascript" src="{{ 'javascript/common.js' | relative_url }}"></script>
+    <script src="{{ 'javascript/common.js' | relative_url }}"></script>
 </body>
 
 </html>
