@@ -3,11 +3,11 @@
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-68E3KJBX33"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-68E3KJBX33');
+    gtag('config', 'G-68E3KJBX33');
 </script>
 
 <script type="application/ld+json">
@@ -25,6 +25,9 @@
     </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://instant.page; style-src 'self' 'unsafe-inline';">
+
 <title>{{ page.title }}</title>
 <link rel="icon" href="{{ 'image/icon/Nisigma_favicon.ico' | relative_url }}">
 <link rel="stylesheet" href="{{ 'css/common.css' | relative_url }}">
