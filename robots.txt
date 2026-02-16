@@ -1,5 +1,8 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+# サイトマップのフルURLを記述して、クローラーを誘導する
+Sitemap: https://nisigma200.github.io/nisigma200/sitemap.xml
 
 # ChatGPT (OpenAI) の学習を拒否
 User-agent: GPTBot

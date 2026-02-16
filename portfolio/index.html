@@ -1,0 +1,54 @@
+---
+layout: default
+title: 西隈サイト | Portfolio
+css_path: css/portfolio/index.css
+---
+
+<button id="page-top"></button>
+<div id="header"></div>
+<div class="container">
+    <div id="content">
+        <div id="child1">
+            <!-- パンくずリスト -->
+            <div class="pan">
+                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+                    <!-- 1つめ -->
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a class="pan-home" itemprop="item" href="{{ site.baseurl }}/">
+                            <span itemprop="name">ホーム</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <!-- 2つめ -->
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        <a class="pan-folder" itemprop="item" href="{{ site.baseurl }}/portfolio/">
+                            <span itemprop="name">Portfolio</span>
+                        </a>
+                        <meta itemprop="position" content="2" />
+                    </li>
+                </ol>
+            </div>
+            <!-- パンくずリスト -->
+            <h1>Portfolio</h1>
+            <div id="update-day">
+                <p id="released">2026.02.16</p>
+                <p id="updated">最新版</p>
+            </div>
+            <div class="card-contents">
+                <ol>
+                    <li class="card-blog-a">
+                        <a href="{{ site.baseurl }}/portfolio/fad-server-plugin.html">
+                            <img src="{{ site.baseurl}}/image/ortfolio/index/FAD-thumbnail.jpg">
+                            <div class="card-blog-content">
+                                <h2 class="card-title">FADサーバープラグイン</h2>
+                                <p class="card-excerpt">
+                                    全自動生成ダンジョン（FAD）<br>コマンドを補うプラグインの作成。UI関連、ランダムの実装。
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
