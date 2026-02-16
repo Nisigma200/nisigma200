@@ -3,25 +3,21 @@ layout: default
 title: 西隈サイト | TOP
 css_path: css/index.css
 ---
-
 <button id="page-top"></button>
 <div id="header"></div>
 <div class="container">
   <div id="content">
     <div id="child1">
-      <!-- パンくずリスト -->
       <div class="pan">
         <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-          <!-- 1つめ -->
           <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-            <a class="pan-home" itemprop="item" href="https://nisigma200.github.io/nisigma200">
+            <a class="pan-home" itemprop="item" href="{{ '/' | relative_url }}">
               <span itemprop="name">ホーム</span>
             </a>
             <meta itemprop="position" content="1" />
           </li>
         </ol>
       </div>
-      <!-- パンくずリスト -->
       <h1>About Me</h1>
       <div id="update-day">
         <p id="released">2026.02.14</p>
@@ -77,7 +73,7 @@ css_path: css/index.css
         <div class="major_exe">
           <div class="about-me img-frame">
             <div class="icon major_icon_div">
-              <img src="image/index/major_exe-icon.jpg" class="major_icon">
+              <img src="{{ 'image/index/major_exe-icon.jpg' | relative_url }}" class="major_icon">
             </div>
             <p>少佐.exe（少佐.exe）</p>
           </div>
