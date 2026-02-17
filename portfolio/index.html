@@ -9,17 +9,14 @@ css_path: css/portfolio/index.css
 <div class="container">
     <div id="content">
         <div id="child1">
-            <!-- パンくずリスト -->
             <div class="pan">
                 <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <!-- 1つめ -->
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a class="pan-home" itemprop="item" href="{{ site.baseurl }}/">
                             <span itemprop="name">ホーム</span>
                         </a>
                         <meta itemprop="position" content="1" />
                     </li>
-                    <!-- 2つめ -->
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         <a class="pan-folder" itemprop="item" href="{{ site.baseurl }}/portfolio/">
                             <span itemprop="name">Portfolio</span>
@@ -28,15 +25,23 @@ css_path: css/portfolio/index.css
                     </li>
                 </ol>
             </div>
-            <!-- パンくずリスト -->
+
             <h1>Portfolio</h1>
             <div id="update-day">
                 <p id="released">2026.02.16</p>
                 <p id="updated">最新版</p>
             </div>
+
+            <div id="filter-buttons">
+                <button class="filter-btn active" data-filter="all">全て</button>
+                <button class="filter-btn" data-filter="dev">開発</button>
+                <button class="filter-btn" data-filter="design">デザイン</button>
+                <button class="filter-btn" data-filter="management">運営</button>
+            </div>
+
             <div class="card-contents">
-                <ol>
-                    <li class="card-blog-a">
+                <div class="card-grid">
+                    <div class="card-blog-a dev management">
                         <a href="{{ site.baseurl }}/portfolio/fad-server-plugin.html">
                             <picture>
                                 <source srcset="{{ site.baseurl}}/image/portfolio/index/FAD-thumbnail.webp"
@@ -48,11 +53,16 @@ css_path: css/portfolio/index.css
                                 <p class="card-excerpt">
                                     全自動生成ダンジョン（FAD）<br>コマンドを補うプラグインの作成。UI関連、ランダムの実装。
                                 </p>
+                                <div class="card-tags">
+                                    <span class="tag-label">Java</span>
+                                    <span class="tag-label">System</span>
+                                </div>
                             </div>
                         </a>
-                    </li>
-                </ol>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<script src="{{ '/javascript/portfolio-tag.js' | relative_url }}"></script>
