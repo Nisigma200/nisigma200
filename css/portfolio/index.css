@@ -1,6 +1,10 @@
 @import url("../common.css");
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root {
+    --color-thin: #555555;
+}
+
 /* --- フィルタリングボタン --- */
 #filter-buttons {
     margin: 20px 0;
@@ -153,14 +157,37 @@
 
 .card-blog-content .card-excerpt {
     font-size: 0.95rem;
-    color: #666;
+    color: var(--color-thin);
     line-height: 1.4;
+}
+
+.card-filters::before {
+    content: "\f02b";
+    margin-right: 5px;
+    color: var(--color-thin);
+}
+
+.filter-label {
+    display: inline-block;
+    background-color: #f3f3f3;
+    color: var(--color-thin);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.card-tags::before {
+    content: "\f121";
+    margin-right: 5px;
+    color: var(--color-thin);
 }
 
 .tag-label {
     display: inline-block;
     background-color: #f3f3f3;
-    color: #666;
+    color: var(--color-thin);
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -179,4 +206,25 @@
         /* スマホでも同様：透明化してから一瞬で高さを消す */
         transition: opacity 0.4s ease, max-height 0s 0.4s;
     }
+}
+
+/* タグ絵文字 */
+.tag-label::before {
+    margin-right: 5px;
+}
+
+.java::before {
+    content: "\f4e4";
+}
+
+.html::before {
+    content: "\f13b";
+}
+
+.css::before {
+    content: "\e6a2";
+}
+
+.javascript::before {
+    content: "\f3b8";
 }
