@@ -75,7 +75,13 @@
 <link rel="icon" type="image/png" sizes="24x24" href="{{ site.baseurl}}/image/favicon/icon-24x24.png">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl}}/image/favicon/icon-32x32.png">
 <link rel="icon" sizes="any" href="{{ site.baseurl }}/image/favicon/favicon.svg" type="image/svg+xml">
-<link rel="manifest" href="{{ site.baseurl}}/image/favicon/manifest.json">
+
+<!-- Safariのアイコン色（mask-icon） -->
+<link rel="mask-icon" href="{{ site.baseurl}}/image/favicon/favicon.svg" color="#242424">
+<meta name="theme-color" content="#242424">
+
+<!-- Referrer-Policy -->
+<meta name="referrer" content="no-referrer-when-downgrade">
 
 <!-- CSS -->
 <link rel="stylesheet" href="{{ 'css/common.css' | relative_url }}">
