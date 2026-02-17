@@ -161,7 +161,7 @@
     line-height: 1.4;
 }
 
-.card-filters::before {
+.card-filters .title-tag::before {
     content: "\f02b";
     margin-right: 5px;
     color: var(--color-thin);
@@ -174,11 +174,10 @@
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.75rem;
-    font-weight: bold;
     margin-bottom: 8px;
 }
 
-.card-tags::before {
+.card-tags .title-tag::before {
     content: "\f121";
     margin-right: 5px;
     color: var(--color-thin);
@@ -191,7 +190,6 @@
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 0.75rem;
-    font-weight: bold;
     margin-bottom: 8px;
 }
 
