@@ -116,7 +116,7 @@
 .card-blog-a::before {
     content: counter(card-number, decimal-leading-zero);
     position: absolute;
-    top: 180px;
+    top: 200px;
     left: -25px;
     font-size: 150px;
     line-height: 1;
@@ -159,6 +159,7 @@
     font-size: 0.95rem;
     color: var(--color-thin);
     line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 .card-filters .title-tag::before {

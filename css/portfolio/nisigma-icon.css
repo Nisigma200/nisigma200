@@ -1,0 +1,68 @@
+@import url("../common.css");
+
+.icon-container {
+    display: flex;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.icon {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.icon svg {
+    text-align: center;
+}
+
+.color-container {
+    display: grid;
+    /* 1列目を自動幅、2列目を少し余白を開けて配置 */
+    grid-template-columns: auto 1fr;
+    gap: 0 20px;
+    /* コンテナの幅を中の文字に合わせる */
+    width: fit-content;
+    /* td（セル）の中で左右中央に寄せる */
+    margin: 0 auto;
+}
+
+.icon-white {
+    background-color: var(--color-main);
+}
+
+.icon-black {
+    background-color: var(--color-second);
+}
+
+.img-frame {
+    display: inline-block;
+    flex: 1;
+}
+
+.color-sample {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #FFFFFF;
+}
+
+@media screen and (max-width: 480px) {
+    .color-sample {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.color-sample-black {
+    background-color: var(--color-main);
+}
+
+.color-sample-white {
+    background-color: var(--color-second);
+}

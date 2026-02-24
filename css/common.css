@@ -85,6 +85,17 @@ h1 {
   text-align: center;
 }
 
+h1:before {
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 5px;
+  content: '';
+  border-radius: 3px;
+  background: var(--color-main);
+}
+
 h2,
 .normal_tytle {
   position: relative;
@@ -100,17 +111,6 @@ h3 {
   padding-left: 10px;
   padding-bottom: 5px;
   color: var(--color-text);
-}
-
-h1:before {
-  position: absolute;
-  bottom: -10px;
-  left: calc(50% - 30px);
-  width: 60px;
-  height: 5px;
-  content: '';
-  border-radius: 3px;
-  background: var(--color-main);
 }
 
 body {
@@ -535,20 +535,22 @@ blockquote::after {
 }
 
 .normal_table th {
-  min-width: 240px;
+  min-width: 200px;
   border-bottom: solid 2px var(--color-main);
   padding: 10px 0;
-  text-align: left;
+  text-align: center;
 }
 
-.normal_table th:first-child {
-  min-width: 200px !important;
+@media screen and (max-width: 480px) {
+  .normal_table th {
+    min-width: 100px;
+  }
 }
 
 .normal_table td {
   border-bottom: solid 2px #ddd;
   padding: 10px 0;
-  text-align: left;
+  text-align: center;
 }
 
 /* ↓ テーブルのscroll分かりやすくするやつ ↓ */
@@ -563,6 +565,25 @@ blockquote::after {
   background: linear-gradient(to left, hsla(0, 0%, 100%, 0), white 15px) 0 0 / 50px 100%, linear-gradient(to right, hsla(0, 0%, 100%, 0), white 15px) right / 50px 100%;
   background-repeat: no-repeat;
   background-attachment: local;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table-wrap table th,
+.table-wrap table td {
+  border: solid 1px var(--color-text);
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.table-wrap table tr:nth-child(odd) {
+  padding: 10px;
+  background: rgba(53, 53, 53, 0.1);
+  white-space: nowrap;
 }
 
 /* ↑ テーブルのscroll分かりやすくするやつ ↑ */
@@ -666,7 +687,6 @@ header {
 }
 
 /* ↑ ヘッダー ↑ */
-
 /* ↓ フッター ↓ */
 footer {
   display: flex;
@@ -820,7 +840,6 @@ footer .copyright-1 {
 }
 
 /* ↑ パンくずリスト ↑ */
-
 /* ↓ アコーディオンボックス ↓ */
 .acbox {
   width: auto;
@@ -920,51 +939,6 @@ footer .copyright-1 {
 }
 
 /* ↑ アコーディオンボックス ↑ */
-/* ↓ テーブル ↓ */
-.normal_table {
-  width: auto;
-  border-collapse: collapse;
-  border-spacing: 0;
-  display: block;
-  white-space: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.normal_table th {
-  min-width: 240px;
-  border-bottom: solid 2px var(--color-main);
-  padding: 10px 0;
-  text-align: left;
-}
-
-.normal_table th:first-child {
-  min-width: 200px !important;
-}
-
-.normal_table td {
-  border-bottom: solid 2px #ddd;
-  padding: 10px 0;
-  text-align: left;
-}
-
-/* ↓ テーブルのscroll分かりやすくするやつ ↓ */
-.table-wrap {
-  overflow: auto;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) 0 0/20px 100%, linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.4)) right/20px 100%;
-  background-repeat: no-repeat;
-  margin: 16px 0;
-}
-
-.table-wrap table {
-  background: linear-gradient(to left, hsla(0, 0%, 100%, 0), white 15px) 0 0 / 50px 100%, linear-gradient(to right, hsla(0, 0%, 100%, 0), white 15px) right / 50px 100%;
-  background-repeat: no-repeat;
-  background-attachment: local;
-}
-
-/* ↑ テーブルのscroll分かりやすくするやつ ↑ */
-/* ↑ テーブル ↑ */
-
 /* ↓ Page TOP ↓ */
 /* ボタンのスタイル */
 #page-top {

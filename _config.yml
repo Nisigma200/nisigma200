@@ -1,6 +1,6 @@
 title: 西隈サイト
 description: 西隈（ニシグマ）の個人サイト
-baseurl: "/nisigma200"
+baseurl: ""
 url: "https://nisigma200.github.io"
 
 # Jekyllのビルド対象から除外する設定
